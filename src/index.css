@@ -1,0 +1,258 @@
+
+/* ===== GLOBAL ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f6fa;
+  color: #222;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* ===== HEADER ===== */
+header {
+  background: #101820;
+  color: white;
+  padding: 22px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.15);
+}
+
+header h2 {
+  color: #e5b45b;
+  font-size: 28px;
+  letter-spacing: 1px;
+}
+
+nav {
+  display: flex;
+  gap: 30px;
+}
+
+nav a {
+  color: white;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+  color: #e5b45b;
+}
+
+/* ===== MAIN ===== */
+main {
+  min-height: 75vh;
+  padding: 60px 8%;
+}
+
+/* ===== TITLES ===== */
+h1 {
+  font-size: 36px;
+  color: #101820;
+  margin-bottom: 20px;
+}
+
+h2 {
+  margin-bottom: 15px;
+}
+
+p {
+  line-height: 1.7;
+  color: #666;
+  margin-bottom: 12px;
+}
+
+/* ===== BUTTONS ===== */
+button {
+  background: #e5b45b;
+  color: #101820;
+  border: none;
+  padding: 13px 25px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #c9953f;
+  transform: translateY(-2px);
+}
+
+/* ===== HOME ===== */
+.accueil {
+  text-align: center;
+  padding: 100px 20px;
+  background: linear-gradient(135deg, #101820, #263b4b);
+  border-radius: 20px;
+  color: white;
+}
+
+.accueil h1 {
+  color: #e5b45b;
+  font-size: 42px;
+}
+
+.accueil p {
+  color: #eee;
+  font-size: 18px;
+  max-width: 650px;
+  margin: 20px auto 30px;
+}
+
+/* ===== CARS LIST ===== */
+.grille {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 25px;
+  margin-top: 35px;
+}
+
+.carte {
+  background: white;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+  border: 1px solid #eee;
+  transition: 0.3s;
+}
+
+.carte:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+}
+
+.carte h2 {
+  color: #101820;
+  font-size: 22px;
+}
+
+.carte p {
+  margin: 10px 0;
+}
+
+.carte a {
+  display: inline-block;
+  background: #101820;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 7px;
+  margin-top: 12px;
+  transition: 0.3s;
+}
+
+.carte a:hover {
+  background: #e5b45b;
+  color: #101820;
+}
+
+/* ===== CAR STATUS ===== */
+.disponible {
+  color: #16834a;
+  font-weight: bold;
+}
+
+.louee {
+  color: #d93636;
+  font-weight: bold;
+}
+
+/* ===== CAR DETAILS ===== */
+.detail {
+  background: white;
+  max-width: 650px;
+  margin: auto;
+  padding: 35px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.detail p {
+  border-bottom: 1px solid #eee;
+  padding: 10px 0;
+}
+
+.detail button {
+  margin-top: 20px;
+}
+
+/* ===== CONTACT ===== */
+.contact {
+  background: white;
+  max-width: 650px;
+  margin: auto;
+  padding: 35px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* ===== 404 ===== */
+.introuvable {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.introuvable h1 {
+  font-size: 90px;
+  color: #e5b45b;
+}
+
+.introuvable a {
+  display: inline-block;
+  background: #101820;
+  color: white;
+  padding: 12px 22px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background: #101820;
+  color: white;
+  text-align: center;
+  padding: 25px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .grille {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  nav {
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  main {
+    padding: 35px 5%;
+  }
+
+  .grille {
+    grid-template-columns: 1fr;
+  }
+
+  .accueil h1 {
+    font-size: 30px;
+  }
+}
